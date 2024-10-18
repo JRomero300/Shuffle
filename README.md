@@ -1,17 +1,26 @@
-Problem:
+**Problem Statement**
 
-Using the language of your choice implement the following program named Shuffle:
-Input a single integer N. Output the positive integers less than N in random order.
-Optimize for speed.
+Implement a program named Shuffle in your preferred programming language. The program should:
 
-Solution: 
-Time complexity O(n)
+Accept a single integer input, N.
+Output the positive integers less than N in a random order.
 
-Using parallization with fisher yates algorithm for shuffling numbers with each thread.
+**Requirements**
 
-Results(ms)
-Parallel
-------------
+Optimize the implementation for speed.
+
+**Proposed Solution**
+
+Time Complexity: O(n)
+Utilize parallelization combined with the Fisher-Yates shuffle algorithm for efficiently shuffling the integers across multiple threads.
+
+**Performance Results**
+
+The following results demonstrate the performance of both parallel and sequential implementations of the Shuffle program:
+
+Parallel(ms)
+--------------------------------------
+
 Parallel N = 100000
 Time 7516
 
@@ -21,7 +30,7 @@ Time 11084
 Parallel N = 1000000
 Time 43191
 
-Sequential
+Sequential(ms)
 ----------------
 Sequential N = 100000
 Time 11491
@@ -31,3 +40,8 @@ Time 15360
 
 Sequential N = 1000000
 Time 61726
+
+**Observations**
+
+The parallel implementation significantly reduces execution time compared to the sequential implementation, especially as N increases.
+Although parallelization introduces some overhead, the performance gain becomes more pronounced with larger datasets, demonstrating the effectiveness of using multiple threads for this problem.
